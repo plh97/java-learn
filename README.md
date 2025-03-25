@@ -1,8 +1,7 @@
-# Science OS Demo
+# Full stack project template
 
-[![GitHub Actions CI/CD](https://github.com/plh97/SOS/actions/workflows/github-CICD-actions.yml/badge.svg)](https://github.com/plh97/SOS/actions/workflows/github-CICD-actions.yml)
+[![GitHub Actions CI/CD](https://github.com/plh97/java-learn/actions/workflows/github-CICD-actions.yml/badge.svg)](https://github.com/plh97/java-learn/actions/workflows/github-CICD-actions.yml)
 
-<!-- ![Vercel Deploy](https://deploy-badge.vercel.app/vercel/sos-svelte) -->
 
 ## Architect
 
