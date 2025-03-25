@@ -1,0 +1,31 @@
+---
+- hosts: vultr
+  # user: ubuntu
+  # gather_facts: False
+  remote_user: root
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Get running containers
+      docker_host_info:
+        containers: yes
+      register: docker_info
+
+    - name: Stop running containers
+      docker_container:
+        name: "{{ item }}"
+        state: stopped
+      loop: "{{ docker_info.containers | map(attribute='Id') | list }}"
+
+    - name: pull latest code on main branch
+      git:
+        repo: https://github.com/plh97/SOS.git
+        dest: ~/SOS
+        force: true
+        version: main
+
+    - name: deploy
+      command:
+        chdir: ~/SOS
+        cmd: docker compose -f ./docker-compose.dev.yml up -d
+...
