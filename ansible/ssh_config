@@ -8,9 +8,9 @@ Host aws
 
 
 Host vultr
-    HostName 45.76.189.87
+    HostName 45.77.39.167
     # HostKeyAlias ewq
-    IdentityFile ~/.ssh/qwe.pem
+    IdentityFile ~/.ssh/java-learn.pem
     CheckHostIP no
     Port 22
     User root

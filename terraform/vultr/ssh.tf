@@ -1,5 +1,6 @@
 variable "key_name" {
-  default = "qwe"
+  # will add this to your ~/.ssh/java-learn.pem
+  default = "java-learn"
 }
 
 resource "tls_private_key" "example" {

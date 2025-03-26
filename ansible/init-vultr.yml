@@ -20,18 +20,18 @@
     - name: Delete content & directory
       file:
         state: absent
-        path: ~/SOS/
+        path: ~/learn-java/
 
     - name: Clone Repository
       git:
-        repo: https://github.com/plh97/SOS.git
-        dest: ~/SOS
+        repo: https://github.com/plh97/learn-java.git
+        dest: ~/learn-java
         clone: yes
         update: yes
         version: main
 
     - name: deploy
       command:
-        chdir: ~/SOS
+        chdir: ~/learn-java
         cmd: docker compose -f ./docker-compose.dev.yml up -d
 ...

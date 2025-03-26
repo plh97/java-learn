@@ -5,5 +5,8 @@ resource "vultr_instance" "instance" {
   firewall_group_id = "acbe8a72-6ad8-413e-ad71-a49db226cd11"
   hostname          = "vultr.guest"
   label             = "java instance"
-  ssh_key_ids       = [var.ssh_key_id, vultr_ssh_key.my_ssh_key.id]
+  ssh_key_ids       = [vultr_ssh_key.my_ssh_key.id]
+  provisioner "local-exec" {
+    command = "sh modify_ip.sh ${self.public_ip}"
+  }
 }
