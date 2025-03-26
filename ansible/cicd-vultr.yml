@@ -19,13 +19,12 @@
 
     - name: pull latest code on main branch
       git:
-        repo: https://github.com/plh97/learn-java.git
-        dest: ~/learn-java
+        repo: https://github.com/plh97/java-learn.git
+        dest: ~/java-learn
         force: true
         version: main
 
     - name: deploy
       command:
-        chdir: ~/learn-java
+        chdir: ~/java-learn
         cmd: docker compose -f ./docker-compose.dev.yml up -d
-...

@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"main": "index.js",
-	"repository": "https://github.com/plh97/learn-java.git",
+	"repository": "https://github.com/plh97/java-learn.git",
 	"author": "plh97 <pengliheng111@gmail.com>",
 	"license": "MIT",
 	"scripts": {
