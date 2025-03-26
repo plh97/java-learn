@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://45.76.189.87:8080/:path*"
+      "destination": "http://45.77.39.167:8080/:path*"
     }
   ]
 }
