@@ -1,5 +1,5 @@
-name: GitHub Actions CICD
-run-name: ${{ github.actor }} deploy ScienceOS 🚀
+name: Ansible deploy
+run-name: ${{ github.actor }} Ansible Deploy 🚀
 on:
   push:
     branches:
